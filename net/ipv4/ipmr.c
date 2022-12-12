@@ -2364,6 +2364,7 @@ static size_t mroute_msgsize(bool unresolved, int maxvif)
 		      + maxvif * NLA_ALIGN(sizeof(struct rtnexthop))
 						/* RTA_MFC_STATS */
 		      + nla_total_size_64bit(sizeof(struct rta_mfc_stats))
+		      + nla_total_size(8)   /* RTA_EXPIRES */
 		;
 
 	return len;
